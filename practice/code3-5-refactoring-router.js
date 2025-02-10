@@ -23,10 +23,16 @@ http.createServer((req,res) => {
         <li>picture1</li>
         <li>picture2</li>
         <li>picture3</li>
-        `);
+        `)};
 
     const notFound = (req,res)=>{
         res.statusCode = 404;
         res.end("404 page not found");
-    }
-    }
+    };
+
+    const urlMap = {
+        "/" : (req,res) => res.end("HOME"),
+        "/user" : user,
+        "/feed" : feed,
+    };
+    
